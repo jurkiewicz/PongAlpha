@@ -1,0 +1,28 @@
+body{
+	width: auto;
+	height: 400px;
+	background: #000000;
+	margin: 0px;
+	font-family: monospace;
+	font-size: 100px;
+	color: #ffffff;
+}
+#table{
+	width: 800px;
+	height: 494.44px;
+	background: #161616;
+}
+#lewy{
+	left: 10px;
+	top: 0px;
+	width: auto;
+	height: 100px;
+	position: absolute;
+}
+#prawy{
+	left: 735px;
+	top: 0px;
+	width: auto;
+	height: 100px;
+	position: absolute;
+}
