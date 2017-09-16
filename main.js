@@ -1,5 +1,12 @@
 document.addEventListener("DOMContentLoaded", function(){
 
+    var key = [];
+
+    onkeydown = onkeyup = function (e){
+        var e = e || event;
+        key[e.keyCode] = e.type == 'keydown';
+    }
+
     function draw() {
 
         //czyścimy obszar canvasu
@@ -39,6 +46,32 @@ document.addEventListener("DOMContentLoaded", function(){
             stepY = -stepY;
         }
 
+        for(i = 0; i < key.length; i ++){
+            if(key[i]){
+                switch (i) {
+                    case 65: // a
+                        LP = -0.5;
+                        console.log(key[i]);
+                    break;
+                 
+                    case 90: // z
+                        LP = 0.5;
+                        console.log(key[i]);
+                    break;
+                 
+                    case 75: // k
+                        RP = -0.5;
+                        console.log(key[i]);
+                    break;
+                 
+                    case 77: // m
+                        RP = 0.5;
+                        console.log(key[i]);
+                    break;
+                }
+            }
+        }
+
         //odbicie od paletki
         if (ballX <= 34 && ballX >= 30 && ((ballY + 10 >= LY || ballY >= LY) && (ballY <= LY + 20 || ballY + 10 <= LY + 20))) {
             stepX -= 0.05;
@@ -64,20 +97,20 @@ document.addEventListener("DOMContentLoaded", function(){
         ballY += stepY;
 
         //przesunięcie paletek
-        if (LY <= 0 && LP == -2) {
+        if (LY <= 0 && LP == -0.5) {
             LP = 0;
             LY = 0;
-        } else if (LY >= 130 && LP == 2) {
+        } else if (LY >= 130 && LP == 0.5) {
             LP = 0;
             LY = 130;
         } else {
             LY += LP;
             LP = 0;
         }
-        if (RY <= 0 && RP == -2) {
+        if (RY <= 0 && RP == -0.5) {
             RP = 0;
             RY = 0;
-        } else if (RY >= 130 && RP == 2) {
+        } else if (RY >= 130 && RP == 0.5) {
             RP = 0;
             RY = 130;
         } else {
@@ -122,6 +155,7 @@ document.addEventListener("DOMContentLoaded", function(){
     var prawy = 0;
 
     //paletki
+    var i;
     var LY = 65;
     var RY = 65;
     var LP = 0;
@@ -152,26 +186,6 @@ document.addEventListener("DOMContentLoaded", function(){
     var table = document.getElementById('table');
     var c = table.getContext('2d');
     c.fillStyle = "#ffffff";
-
-    window.addEventListener('keydown', function(event) {
-      switch (event.keyCode) {
-        case 65: // a
-          LP = -2;
-        break;
-     
-        case 90: // z
-          LP = 2;
-        break;
-     
-        case 75: // k
-          RP = -2;
-        break;
-     
-        case 77: // m
-          RP = 2;
-        break;
-      }
-    });
 
     var play;
     
