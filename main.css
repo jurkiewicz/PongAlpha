@@ -26,3 +26,48 @@ body{
 	height: 100px;
 	position: absolute;
 }
+#menu{
+	top: 150px;
+	left: 300px;
+	width: 200px;
+	height: 115px;
+	font-size: 20px;
+	position: absolute;
+	visibility: visible;
+	text-align: center;
+}
+#start{
+	left: 400px;
+	width: 200px;
+	height: 46px;
+	font-size: 20px;
+	text-align: center;
+	clear: both;
+	
+}
+.right{
+	left: 400px;
+	width: 100px;
+	height: 46px;
+	font-size: 20px;
+	text-align: right;
+	float: left;
+}
+.left{
+	left: 300px;
+	width: 100px;
+	height: 46px;
+	font-size: 20px;
+	text-align: left;
+	float: left;
+}
+#end{
+	top: 150px;
+	left: 300px;
+	width: 200px;
+	height: 115px;
+	font-size: 20px;
+	position: absolute;
+	visibility: hidden;
+	text-align: center;
+}
