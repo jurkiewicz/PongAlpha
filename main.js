@@ -2,27 +2,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
     function draw() {
 
-        //zakończenie gry
-        if (prawy === 21) {
-            clearInterval(play);
-            c.clearRect(0, 0, 800, 494.44);
-            body.style.cursor = 'default';
-            end.style.visibility = 'visible';
-            end.innerHTML = 'Wygrał gracz z prawej!'
-            end.addEventListener('click', function(){
-                location.reload();
-            });
-        } else if (lewy === 21) {
-            clearInterval(play);
-            c.clearRect(0, 0, 800, 494.44);
-            body.style.cursor = 'default';
-            end.style.visibility = 'visible';
-            end.innerHTML = 'Wygrał gracz z lewej!'
-            end.addEventListener('click', function(){
-                location.reload();
-            });
-        }
-
         //czyścimy obszar canvasu
         c.clearRect(0, 0, 800, 494.44);
 
@@ -114,6 +93,27 @@ document.addEventListener("DOMContentLoaded", function(){
         for (var i = 0; i < 494.44;) {
             c.fillRect(middle, i, 4, 10);
             i += 20;
+        }
+
+        //zakończenie gry
+        if (prawy === 21) {
+            clearInterval(play);
+            c.clearRect(0, 0, 800, 494.44);
+            body.style.cursor = 'default';
+            end.style.visibility = 'visible';
+            end.innerHTML = 'Wygrał gracz z prawej!'
+            end.addEventListener('click', function(){
+                location.reload();
+            });
+        } else if (lewy === 21) {
+            clearInterval(play);
+            c.clearRect(0, 0, 800, 494.44);
+            body.style.cursor = 'default';
+            end.style.visibility = 'visible';
+            end.innerHTML = 'Wygrał gracz z lewej!'
+            end.addEventListener('click', function(){
+                location.reload();
+            });
         }
     }
 
