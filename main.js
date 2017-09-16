@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function(){
             body.style.cursor = 'default';
             end.style.visibility = 'visible';
             end.innerHTML = 'Wygrał gracz z prawej!'
-            end.addEventListener('click', function(){
+            body.addEventListener('click', function(){
                 location.reload();
             });
         } else if (lewy === 21) {
@@ -147,7 +147,7 @@ document.addEventListener("DOMContentLoaded", function(){
             body.style.cursor = 'default';
             end.style.visibility = 'visible';
             end.innerHTML = 'Wygrał gracz z lewej!'
-            end.addEventListener('click', function(){
+            body.addEventListener('click', function(){
                 location.reload();
             });
         }
