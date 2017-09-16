@@ -118,6 +118,9 @@ document.addEventListener("DOMContentLoaded", function(){
             RP = 0;
         }
 
+        //Komputer
+        // RY = ballY-5;
+
         //rysowanie paletek
         c.fillRect(30, LY, 4, 20);
         c.fillRect(266, RY, 4, 20);
