@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function(){
         }
 
         //odbicie od paletki
-        if (ballX <= 34 && ballX >= 33 && ((ballY + 10 >= LY || ballY >= LY) && (ballY <= LY + 20 || ballY + 10 <= LY + 20))) {
+        if (stepX < 0 && ballX <= 34 && ballX >= 30 && ((ballY + 10 >= LY || ballY >= LY) && (ballY <= LY + 20 || ballY + 10 <= LY + 20))) {
             stepX -= 0.05;
             if (stepY < 0) {
                 stepY -= 0.05;
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function(){
             }
             stepX = -stepX;
         }
-        if (ballX + 10 >= 266 && ballX + 10 <= 267 && ((ballY + 10 >= RY || ballY >= RY) && (ballY <= RY + 20 || ballY + 10 <= RY + 20))) {
+        if (stepX > 0 && ballX + 10 >= 266 && ballX + 10 <= 270 && ((ballY + 10 >= RY || ballY >= RY) && (ballY <= RY + 20 || ballY + 10 <= RY + 20))) {
             stepX += 0.05;
             if (stepY < 0) {
                 stepY -= 0.05;
@@ -120,6 +120,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
         //Komputer
         // RY = ballY-5;
+        // LY = ballY-5;
 
         //rysowanie paletek
         c.fillRect(30, LY, 4, 20);
